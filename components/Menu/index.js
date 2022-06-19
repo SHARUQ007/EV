@@ -5,11 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faMusic, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 import items from "./items"
 
-const Menu = () => {
+const Menu = ({navigation}) => {
+   
     return (
         <View style={styles.menuItems}>
             {items.map(item => (
-                <TouchableOpacity key={item.id}>
+                <TouchableOpacity key={item.id}  onPress={() => {
+                    navigation.navigate(item.navigate);
+                  }}  >
                     <View style={styles.menuRow}>
                         <FontAwesomeIcon style={styles.icon} icon={item.icon} size={24}/>
                         <View style={styles.menuTextBox}>

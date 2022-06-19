@@ -3,57 +3,37 @@ import { faCog, faToolbox, faFan, faKey, faUnlockAlt, faMusic, faChevronRight, f
 const items = [
     {
       id: 1,
-      icon: faMusic,
-      title: "Media",
+      icon: faMapMarkerAlt,
+      title: "Stations",
+      navigate:"Stations",
     },
     {
       id: 2,
-      icon: faClock,
-      title: "Software Updates",
-      subTitle: "Approximate time to install: 45 min"
+      icon: faBolt,
+      title: "Battery",
+      subTitle: "Last Charged: 5 hrs 45 mins ago",
+      navigate:"Battery",
     },
     {
       id: 3,
-      icon: faThermometerHalf,
-      title: "Climate",
-      subTitle: "20°F"
+      icon: faShoppingBag,
+      title: "EV Store",
+      subTitle: "Batteries & Spare Parts",
+      navigate:"EVStore",
     },
     {
       id: 4,
       icon: faCar,
-      title: "Controls",
+      title: "Directions",
+      navigate:"Directions",
     },
     {
       id: 5,
-      icon: faBolt,
-      title: "Charging",
+      icon: faExclamationTriangle,
+      title: "STATION Reports",
+      navigate:"StationReviews",
     },
-    {
-      id: 6, 
-      icon: faMapMarkerAlt, 
-      title: "Location "
-    },    
-    {
-      id: 7, 
-      icon: faShoppingBag, 
-      title: "Upgrades "
-    },        
-    {
-      id: 8, 
-      icon: faKey, 
-      title: "Phone Key ",
-      subTitle: "Disconnected"
-    },        
-    {
-      id: 9, 
-      icon: faWrench, 
-      title: "Services "
-    },        
-    {
-      id: 11, 
-      icon: faExclamationTriangle, 
-      title: "Roadside assistance "
-    },        
+    
 ];
 
 export default items;

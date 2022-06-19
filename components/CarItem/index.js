@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
 import { faCog, faToolbox, faFan, faKey, faLock, faUnlockAlt } from '@fortawesome/free-solid-svg-icons'
 import Menu from "../Menu/index"
 
-const CarItem = () => {
+const CarItem = ({navigation}) => {
     const [locked, setLocked ] = useState(true)
     const clickLock = () => {
         if(locked){
@@ -16,7 +16,7 @@ const CarItem = () => {
     }
     return (
         <View style={styles.carContainer}>
-            <ImageBackground
+            <Image
                 source={require("../../assets/background.png")}
                 style={styles.backgroundImage}
             />
@@ -25,7 +25,7 @@ const CarItem = () => {
                 <TouchableOpacity>
                     <FontAwesomeIcon style={styles.icon} icon={ faCog } size={24}/>
                 </TouchableOpacity>
-                <Text style={styles.headerTitle}>NazMobile</Text>
+                <Text style={styles.headerTitle}>EV Green</Text>
                 <TouchableOpacity>
                     <FontAwesomeIcon style={styles.icon} icon={ faToolbox } size={24} />
                 </TouchableOpacity>
@@ -36,13 +36,13 @@ const CarItem = () => {
                     source={require("../../assets/battery.png")}
                     style={styles.batteryImage}
                 />
-                <Text style={styles.batteryText}>150 mi</Text>
+                <Text style={styles.batteryText}>480 Km</Text>
             </View>
             {/* Status */}
-            <View style={styles.status}>
+            {/* <View style={styles.status}>
                 <Text style={styles.statusText}>Parked</Text>
-            </View>
-            <ScrollView>
+            </View> */}
+            <View>
                 {/* Control Icons */}
                 <View style={styles.controls}>
                     <TouchableOpacity>
@@ -64,8 +64,8 @@ const CarItem = () => {
                     </TouchableOpacity>
                 </View>
                 {/* Menu */}
-                <Menu />
-            </ScrollView>
+                <Menu navigation={navigation}/>
+            </View>
         </View>
     )
 };

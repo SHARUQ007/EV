@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
     batterySection: {
         flexDirection: "row",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        marginTop: 172
     },
     batteryImage: {
         height: 26,
@@ -57,7 +58,7 @@ const styles = StyleSheet.create({
     controls: {
         flexDirection: "row",
         justifyContent: "center",
-        marginTop: 175
+        marginTop: 30
     },
     controlsButton: {
         borderWidth: 1,
